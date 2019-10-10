@@ -1,3 +1,6 @@
+# react-redux-web-boilerplate
+This a boilerplate for projects that use react and redux for a SPA web application 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
