@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import 'App.scss';
+import {connect} from 'react-redux';
 
 function App() {
   return (
@@ -23,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect()(App);
