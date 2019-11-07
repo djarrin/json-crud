@@ -1,4 +1,5 @@
 import React from 'react';
+import 'assets/styles/bootstrap-grid.min.css';
 import logo from './logo.svg';
 import 'App.scss';
 import {connect} from 'react-redux';
