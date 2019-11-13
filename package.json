@@ -18,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "styleGuideRun": "npx styleguidist server",
+    "styleGuideBuild": "npx styleguidist build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-styleguidist": "^10.2.0"
   }
 }
