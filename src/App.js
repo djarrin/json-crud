@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch, useSelector, connect} from 'react-redux';
 import JSONPretty from 'react-json-pretty';
 import 'assets/styles/bootstrap-grid.min.css';
 import 'App.scss';
-import {connect} from 'react-redux';
 import {isJson} from 'utils';
 import {setJsonData} from 'redux-resources/actions/JsonDataActions';
 import JsonEditForm from 'components/JsonEditForm';
@@ -37,21 +36,21 @@ function App() {
   return (
     <div className="App">
 
-      {formState === 'start' ?
-        (<>
-          <form
-            onSubmit={(e) => editJson(e)}
-          >
-          <p>Please enter a valid json string so you can get to editing it</p>
-          <textarea
-            id={'initial-json-data'}
-          />
-          <button id={'edit'} type={'submit'}>Edit</button>
-          </form>
-        </>) : null
-      }
+      {/*{formState === 'start' ?*/}
+      {/*  (<>*/}
+      {/*    <form*/}
+      {/*      onSubmit={(e) => editJson(e)}*/}
+      {/*    >*/}
+      {/*    <p>Please enter a valid json string so you can get to editing it</p>*/}
+      {/*    <textarea*/}
+      {/*      id={'initial-json-data'}*/}
+      {/*    />*/}
+      {/*    <button id={'edit'} type={'submit'}>Edit</button>*/}
+      {/*    </form>*/}
+      {/*  </>) : null*/}
+      {/*}*/}
 
-      {formState === 'edit' ?
+      {formState === 'start' ?
         (
           <JsonEditForm onSubmit={jsonEditFormSubmitted}/>
         ) : null
@@ -59,7 +58,7 @@ function App() {
 
       {formState === 'show' ?
         (
-          <JSONPretty id="json-pretty" data={jsonData}></JSONPretty>
+          <JSONPretty id="json-pretty" data={JSON.parse(jsonData.jsonData)}></JSONPretty>
         ) : null
       }
 

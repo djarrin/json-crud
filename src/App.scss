@@ -1,5 +1,14 @@
+$indent-level: 50px;
 .App {
-  text-align: center;
+  //margin: auto 0;
+}
+
+.level-1 {
+  margin-left: 25px;
+}
+
+#json-pretty {
+  text-align: unset;
 }
 
 .App-logo {
