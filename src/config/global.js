@@ -6,5 +6,3 @@
  */
 export const ENV = 'DEV';
 
-// the base url for the api service this application is using
-export const apiBase = 'http://192.168.33.78';

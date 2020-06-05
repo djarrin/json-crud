@@ -1,4 +1,4 @@
 import {combineReducers} from 'redux';
-import defaultReducer from 'redux-resources/reducers/defaultReducer';
+import jsonData from 'redux-resources/reducers/jsonData';
 
-export default combineReducers({defaultReducer});
+export default combineReducers({jsonData: jsonData});
