@@ -42,7 +42,6 @@ const JsonEditForm = props => {
 
   return (
     <div id={'json-edit-form'}>
-      {console.log('new render')}
       <p className={'level-0'}>{'{'}</p>
       {staticDisplayArray.map((element) => <p className={'level-1'}>{element[0]}: {element[1]}</p>)}
       <p className={'level-0'}>{'}'}</p>

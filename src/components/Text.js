@@ -8,12 +8,12 @@ const Text = props => {
 
   const dispatch = useDispatch();
 
-  const changeState = () => {
-    dispatch(editValue({path: path, value: 'new value'}))
+  const changeState = (e) => {
+    dispatch(editValue({path: path, value: e.target.value}))
   }
 
   return (
-    <input type={'text'} value={value} onChange={changeState}/>
+    <input type={'text'} value={value} onChange={(e) => changeState(e)}/>
   );
 };
 
