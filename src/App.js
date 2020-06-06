@@ -36,21 +36,21 @@ function App() {
   return (
     <div className="App">
 
-      {/*{formState === 'start' ?*/}
-      {/*  (<>*/}
-      {/*    <form*/}
-      {/*      onSubmit={(e) => editJson(e)}*/}
-      {/*    >*/}
-      {/*    <p>Please enter a valid json string so you can get to editing it</p>*/}
-      {/*    <textarea*/}
-      {/*      id={'initial-json-data'}*/}
-      {/*    />*/}
-      {/*    <button id={'edit'} type={'submit'}>Edit</button>*/}
-      {/*    </form>*/}
-      {/*  </>) : null*/}
-      {/*}*/}
-
       {formState === 'start' ?
+        (<>
+          <form
+            onSubmit={(e) => editJson(e)}
+          >
+          <p>Please enter a valid json string so you can get to editing it</p>
+          <textarea
+            id={'initial-json-data'}
+          />
+          <button id={'edit'} type={'submit'}>Edit</button>
+          </form>
+        </>) : null
+      }
+
+      {formState === 'edit' ?
         (
           <JsonEditForm onSubmit={jsonEditFormSubmitted}/>
         ) : null
